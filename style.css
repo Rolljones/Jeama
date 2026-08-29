@@ -1,0 +1,439 @@
+/* =========================
+   RESET
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f7f4;
+  color: #171717;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e7e7;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+  min-height: 75px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  color: #111;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  padding: 12px 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #555;
+
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #111;
+
+  transition: 0.3s ease;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 430px;
+
+  background:
+    linear-gradient(rgba(28, 12, 171, 0.54), rgba(73, 32, 32, 0.35)),
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
+  padding: 60px 40px;
+
+  color: white;
+}
+
+.small-heading {
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 82px);
+  line-height: 0.95;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  max-width: 470px;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+  max-width: 1400px;
+  margin: auto;
+
+  padding: 80px 40px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 35px;
+}
+
+.category-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #777;
+
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+#productCount {
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================
+   CATEGORY SECTIONS
+========================= */
+
+.category-section {
+  display: none;
+}
+
+.category-section.active-section {
+  display: block;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+  background: #ffffff;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-card img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  object-fit: cover;
+
+  background: #eeeeee;
+}
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+  padding: 18px 16px 20px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid #e5e5e5;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-container {
+    padding: 0 25px;
+  }
+
+  .products-section {
+    padding: 65px 25px;
+  }
+
+  .hero-content {
+    padding: 50px 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .nav-container {
+    min-height: 65px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    border-top: 1px solid #eeeeee;
+
+    padding: 10px 20px 20px;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+
+    text-align: left;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .hero {
+    min-height: 380px;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    max-width: 350px;
+  }
+
+  .products-section {
+    padding: 55px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .product-info {
+    padding: 14px 12px 16px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .product-info p {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .products-section {
+    padding: 45px 15px;
+  }
+
+  .product-grid {
+    gap: 10px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .product-info h3 {
+    font-size: 13px;
+  }
+}
