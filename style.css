@@ -266,6 +266,11 @@ body {
   padding: 18px 16px 20px;
 }
 
+.product-info .flex-price {
+  display: flex;
+  justify-content: space-between;
+}
+
 .product-info h3 {
   font-size: 16px;
   font-weight: 600;
